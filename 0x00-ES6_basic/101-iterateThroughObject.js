@@ -1,12 +1,12 @@
 export default function iterateThroughObject(reportWithIterator) {
-    let separatedNames = "";
-    let i = 0
-    while (i < reportWithIterator.length) {
-        separatedNames += reportWithIterator[i];
-        if (i < reportWithIterator.length - 1) {
-            separatedNames += " | ";
-        }
-        i++;
+  let separatedNames = '';
+  let i = 0;
+  while (i < reportWithIterator.length) {
+    separatedNames += reportWithIterator[i];
+    if (i < reportWithIterator.length - 1) {
+      separatedNames += ' | ';
     }
-    return separatedNames;
+    i += 1;
+  }
+  return separatedNames;
 }
