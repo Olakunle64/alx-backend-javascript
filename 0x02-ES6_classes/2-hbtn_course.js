@@ -21,7 +21,7 @@ export default class HolbertonCourse {
   }
 
   set length(length) {
-    if (typeof length !== 'number' || isNaN(length)) {
+    if (typeof length !== 'number' || Number.isNaN(length)) {
       throw new TypeError('Length must be a number');
     }
     this._length = length;
