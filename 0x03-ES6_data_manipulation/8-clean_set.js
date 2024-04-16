@@ -3,7 +3,7 @@ export default function cleanSet(set, startString) {
   if (startString) {
     set.forEach((element) => {
       if (element.startsWith(startString)) {
-        suffixArray.push(element.slice(startString.length, element.length));
+        suffixArray.push(element.slice(startString.length));
       }
     });
   }
