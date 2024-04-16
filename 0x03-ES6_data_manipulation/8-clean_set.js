@@ -1,11 +1,8 @@
 export default function cleanSet(set, startString) {
-  const suffixArray = [];
-  if (startString) {
-    set.forEach((element) => {
-      if (element.startsWith(startString)) {
-        suffixArray.push(element.slice(startString.length));
-      }
-    });
-  }
+  if (!startString) return [].join('-');
+
+  const suffixArray = [...set].filter((element) => element.startsWith(startString))
+    .map((element) => element.slice(startString.length));
+
   return suffixArray.join('-');
 }
