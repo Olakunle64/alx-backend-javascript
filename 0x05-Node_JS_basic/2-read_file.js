@@ -28,13 +28,3 @@ function countStudents(filePath) {
   }
 }
 module.exports = countStudents;
-
-// filepath = "databae.csv"
-// if (fs.existsSync(filepath)) {
-//     const data = fs.readFileSync(filepath, 'utf-8');
-
-//     console.log(data.split('\n'))
-//     console.log(typeof data)
-// } else {
-//     console.log("not exists")
-// }
