@@ -6,7 +6,11 @@ process.stdin.setEncoding('utf8');
 process.stdin.on('readable', () => {
   const name = process.stdin.read();
   if (name !== null) {
-    console.log(`Your name is: ${name.trim()}`);
+    if (name === '\n') {
+      console.log('Your name is:');
+    } else {
+      console.log(`Your name is: ${name.trim()}`);
+    }
   }
 });
 process.stdin.on('end', () => {

@@ -44,7 +44,7 @@ app.get('/', (req, res) => {
 app.get('/students', (req, res) => {
   countStudents('database.csv').then((body) => {
     res.send(`This is the list of our students\n${body}`);
-  })
+  });
 });
 
 app.listen(port);
