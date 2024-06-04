@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // create HTTP server
 const { createServer } = require('http');
-const fs = require('fs')
+const fs = require('fs');
 
 // Function to count students in the database
 function countStudents(filePath) {
