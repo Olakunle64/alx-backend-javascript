@@ -43,7 +43,11 @@ app.get('/', (req, res) => {
 
 app.get('/students', (req, res) => {
   countStudents('database.csv').then((body) => {
+    res.set('Content-Type', 'text/plain');
     res.send(`This is the list of our students\n${body}`);
+  }).catch((error) => {
+    res.set('Content-Type', 'text/plain');
+    res.send(error.message);
   });
 });
 

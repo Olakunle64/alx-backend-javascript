@@ -4,10 +4,10 @@ process.stdout.write('Welcome to Holberton School, what is your name?\n');
 process.stdin.setEncoding('utf8');
 
 process.stdin.on('readable', () => {
-  let name = process.stdin.read();
+  const name = process.stdin.read();
   if (name !== null) {
     if (name === '\n') {
-      name = process.stdin.read();
+      console.log('Your name is:');
     } else {
       console.log(`Your name is: ${name.trim()}`);
     }
