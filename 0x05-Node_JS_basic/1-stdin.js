@@ -8,7 +8,7 @@ process.stdin.on('readable', () => {
   if (name !== null) {
     const trimmedName = name.trim();
     if (trimmedName) {
-      console.log(`Your name is: ${trimmedName}\r`);
+      console.log(`Your name is: ${trimmedName}`);
     }
   }
 });
