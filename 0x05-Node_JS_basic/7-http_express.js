@@ -42,7 +42,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/students', (req, res) => {
-  countStudents('database.csv').then((body) => {
+  const databasePath = process.argv[2];
+  countStudents(databasePath).then((body) => {
     res.set('Content-Type', 'text/plain');
     res.send(`This is the list of our students\n${body}`);
   }).catch((error) => {
