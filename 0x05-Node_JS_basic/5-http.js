@@ -49,7 +49,7 @@ const app = createServer((req, res) => {
     countStudents(databasePath).then((body) => {
       res.end(`This is the list of our students\n${body}`);
     }).catch((error) => {
-      res.end(error.message);
+      res.end(`This is the list of our students\nCannot load the database`);
     });
   } else {
     res.end('Not found');

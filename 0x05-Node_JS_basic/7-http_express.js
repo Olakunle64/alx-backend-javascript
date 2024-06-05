@@ -48,7 +48,7 @@ app.get('/students', (req, res) => {
     res.send(`This is the list of our students\n${body}`);
   }).catch((error) => {
     res.set('Content-Type', 'text/plain');
-    res.send(error.message);
+    res.send(`This is the list of our students\nCannot load the database`);
   });
 });
 
