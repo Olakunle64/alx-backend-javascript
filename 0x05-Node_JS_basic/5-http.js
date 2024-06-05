@@ -45,7 +45,8 @@ const app = createServer((req, res) => {
 
   // If the request is for /students, read the database and return the number of students
   if (req.url === '/students') {
-    countStudents('database.csv').then((body) => {
+    const databasePath = process.argv[2];
+    countStudents(databasePath).then((body) => {
       res.end(`This is the list of our students\n${body}`);
     }).catch((error) => {
       res.end(error.message);
