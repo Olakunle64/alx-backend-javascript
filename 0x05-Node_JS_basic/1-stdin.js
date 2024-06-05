@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // A program that will be executed through command line
-process.stdout.write('Welcome to Holberton School, what is your name?\n');
+console.log('Welcome to Holberton School, what is your name?');
 process.stdin.setEncoding('utf8');
 
 process.stdin.on('readable', () => {
@@ -13,5 +13,5 @@ process.stdin.on('readable', () => {
   }
 });
 process.stdin.on('end', () => {
-  console.log('This important software is now closing\n');
+  console.log('This important software is now closing');
 });
