@@ -42,9 +42,9 @@ const port = 1245;
 const app = createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-
-  // If the request is for /students, read the database and return the number of students
-  if (req.url === '/students') {
+  if (req.url === '/') {
+    res.end('Hello Holberton School!');
+  } else if (req.url === '/students') {
     const databasePath = process.argv[2];
     countStudents(databasePath).then((body) => {
       res.end(`This is the list of our students\n${body}`);
@@ -52,7 +52,7 @@ const app = createServer((req, res) => {
       res.end(error.message);
     });
   } else {
-    res.end('Hello Holberton School!');
+    res.end('Not found');
   }
 });
 
