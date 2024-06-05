@@ -46,9 +46,9 @@ app.get('/students', (req, res) => {
   countStudents(databasePath).then((body) => {
     res.set('Content-Type', 'text/plain');
     res.send(`This is the list of our students\n${body}`);
-  }).catch((error) => {
+  }).catch(() => {
     res.set('Content-Type', 'text/plain');
-    res.send(`This is the list of our students\nCannot load the database`);
+    res.send('This is the list of our students\nCannot load the database');
   });
 });
 

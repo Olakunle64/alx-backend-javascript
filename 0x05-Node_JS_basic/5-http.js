@@ -48,8 +48,8 @@ const app = createServer((req, res) => {
     const databasePath = process.argv[2];
     countStudents(databasePath).then((body) => {
       res.end(`This is the list of our students\n${body}`);
-    }).catch((error) => {
-      res.end(`This is the list of our students\nCannot load the database`);
+    }).catch(() => {
+      res.end('This is the list of our students\nCannot load the database');
     });
   } else {
     res.end('Not found');
