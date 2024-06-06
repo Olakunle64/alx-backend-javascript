@@ -7,7 +7,7 @@ const expect = chai.expect;
 describe('getPaymentTokenFromAPI', () => {
     it('when success is true', (done) => {
         getPaymentTokenFromAPI(true).then((data) => {
-            expect(data).to.deep.equal({data: 'Successful response from the API' });
+            expect(data).to.deep.equal({data: 'Successful response from the API'});
         });
         done();
     });
