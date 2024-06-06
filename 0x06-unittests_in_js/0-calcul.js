@@ -1,0 +1,8 @@
+#!/usr/bin/node
+// This module has a function named calculateNumber
+
+function calculateNumber(a, b) {
+  return Math.round(a) + Math.round(b);
+}
+
+module.exports = calculateNumber;
